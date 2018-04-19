@@ -19,7 +19,7 @@ AFL_MULTI_CGC_FUZZ  = os.path.join(AFL_MULTI_CGC_INSTALL_PATH)
 def _setup_other_arch():
     # grab the afl-other-arch repo
     if not os.path.exists(AFL_UNIX_INSTALL_PATH):
-        AFL_UNIX_REPO = "git@gitlab.grimm.lan:toolz/driller/afl-other-arch.git"
+        AFL_UNIX_REPO = "ssh://git@gitlab.grimm.lan:2222/toolz/driller/afl-other-arch.git"
         if subprocess.call(['git', 'clone', AFL_UNIX_REPO, AFL_UNIX_INSTALL_PATH]) != 0:
             raise LibError("Unable to retrieve afl-unix")
 
